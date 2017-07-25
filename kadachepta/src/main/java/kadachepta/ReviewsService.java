@@ -6,9 +6,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Path("/reviews")
 public class ReviewsService {
-	
+	private static final Logger log = LogManager.getLogger(ReviewsService.class);
+
 	/**
 	 * kadachepta.com/reviews/artist?name=_name&rating=_rating
 	 * @param artistName

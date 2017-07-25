@@ -5,8 +5,6 @@ target/
 RemoteSystemsTempFiles/
 Servers/
 logs/
-src/main/webapp/alexa_js/node_modules
-src/main/webapp/app_js/node_modules
 *.tmp
 *.bak
 *.swp
