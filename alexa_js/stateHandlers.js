@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var Alexa = require('alexa-sdk');
 var audioData = require('./audioAssets');
@@ -11,7 +11,7 @@ var stateHandlers = {
          */
         'LaunchRequest' : function () {
             // Initialize Attributes
-            this.attributes['playOrder'] = Array.apply(null, {length: audioData.length}).map(Number.call, Number);
+            /*this.attributes['playOrder'] = Array.apply(null, {length: audioData.length}).map(Number.call, Number);
             this.attributes['index'] = 0;
             this.attributes['offsetInMilliseconds'] = 0;
             this.attributes['loop'] = true;
@@ -20,11 +20,11 @@ var stateHandlers = {
             //  Change state to START_MODE
             this.handler.state = constants.states.START_MODE;
 
-            var message = 'Welcome to the AWS Podcast. You can say, play the audio to begin the podcast.';
-            var reprompt = 'You can say, play the audio, to begin.';
+            //var message = 'Welcome to the AWS Podcast. You can say, play the audio to begin the podcast.';
+            //var reprompt = 'You can say, play the audio, to begin.';
 
-            this.response.speak(message).listen(reprompt);
-            this.emit(':responseReady');
+            //this.response.speak(message).listen(reprompt);*/
+            this.emit('PlayAudio');
         },
         'PlayAudio' : function () {
             if (!this.attributes['playOrder']) {
@@ -77,7 +77,7 @@ var stateHandlers = {
              *  Else :
              *      Ask user if he/she wants to resume from last position.
              *      Change state to RESUME_DECISION_MODE
-             */
+             *
             var message;
             var reprompt;
             if (this.attributes['playbackFinished']) {
@@ -91,8 +91,8 @@ var stateHandlers = {
                 reprompt = 'You can say yes to resume or no to play from the top.';
             }
 
-            this.response.speak(message).listen(reprompt);
-            this.emit(':responseReady');
+            this.response.speak(message).listen(reprompt);*/
+            this.emit('PlayAudio');
         },
         'PlayAudio' : function () { controller.play.call(this) },
         'AMAZON.NextIntent' : function () { controller.playNext.call(this) },
@@ -207,6 +207,7 @@ var controller = function () {
             }
 
             this.response.audioPlayerPlay(playBehavior, podcast.url, token, null, offsetInMilliseconds);
+            
             this.emit(':responseReady');
         },
         stop: function () {
@@ -300,7 +301,7 @@ var controller = function () {
             });
         },
         shuffleOff: function () {
-            // Turn off shuffle play.
+            // Turn off shuffle play. 
             if (this.attributes['shuffle']) {
                 this.attributes['shuffle'] = false;
                 // Although changing index, no change in audio file being played as the change is to account for reordering playOrder

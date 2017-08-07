@@ -3,7 +3,7 @@
 module.exports = Object.freeze({
     
     // App-ID. TODO: set to your own Skill App ID from the developer portal.
-    appId : 'amzn1.ask.skill.d53fd240-cc48-43a1-9d46-3e1685c0ed3d',
+    appId : 'amzn1.ask.skill.d53fd240-cc48-43a1-9d46-3e1685c0ed3d', 
     
     //  DynamoDB Table name
     dynamoDBTableName : 'LongFormAudioSample',

@@ -1,7 +1,7 @@
 {
-  "name": "kadachepta",
+  "name": "skill-sample-nodejs-audio-player",
   "version": "1.0.0",
-  "description": "Kadachepta audio skill",
+  "description": "An audio player sample skill.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,14 +11,13 @@
     "skill",
     "audio player"
   ],
-  "author": "kadachepta.com",
+  "author": "Amazon.com",
   "license": "See license in ../LICENSE.txt",
   "dependencies": {
-    "alexa-sdk": "^1.0.11",
-    "jsmediatags": "^3.6.1"
+    "alexa-sdk": "^1.0.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ajuluri/kadachepta"
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/alexa/skill-sample-nodejs-audio-player"
   }
 }
