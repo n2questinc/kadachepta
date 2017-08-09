@@ -207,7 +207,7 @@ var controller = function () {
             }
 
             this.response.audioPlayerPlay(playBehavior, podcast.url, token, null, offsetInMilliseconds);
-            
+
             this.emit(':responseReady');
         },
         stop: function () {
@@ -301,7 +301,7 @@ var controller = function () {
             });
         },
         shuffleOff: function () {
-            // Turn off shuffle play. 
+            // Turn off shuffle play.
             if (this.attributes['shuffle']) {
                 this.attributes['shuffle'] = false;
                 // Although changing index, no change in audio file being played as the change is to account for reordering playOrder
@@ -331,12 +331,12 @@ function canThrowCard() {
      * In response to a PlaybackController Request (remote control events) we cannot issue a card,
      * Thus adding restriction of request type being "IntentRequest".
      */
-    if (this.event.request.type === 'IntentRequest' && this.attributes['playbackIndexChanged']) {
-        this.attributes['playbackIndexChanged'] = false;
+    // if (this.event.request.type === 'IntentRequest' && this.attributes['playbackIndexChanged']) {
+    //     this.attributes['playbackIndexChanged'] = false;
         return true;
-    } else {
-        return false;
-    }
+    // } else {
+    //     return false;
+    // }
 }
 
 function shuffleOrder(callback) {
