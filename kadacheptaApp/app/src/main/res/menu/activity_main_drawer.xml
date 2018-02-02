@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_radio"
+            android:icon="@drawable/radio_menu"
+            android:title="Radio" />
+        <item
+            android:id="@+id/nav_myplaylist"
+            android:icon="@drawable/my_play_list"
+            android:title="My playlist" />
+        <item
+            android:id="@+id/nav_publicplaylist"
+            android:icon="@drawable/public_playlist"
+            android:title="Public playlist" />
+        <item
+            android:id="@+id/nav_like"
+            android:icon="@drawable/my_like"
+            android:title="Like" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/search_art"
+            android:title="Search" />
+
+        <item
+            android:id="@+id/nav_track"
+            android:icon="@drawable/track_art"
+            android:title="Track" />
+        <item
+            android:id="@+id/nav_top"
+            android:icon="@drawable/top_art"
+            android:title="Top song" />
+        <item
+            android:id="@+id/nav_offline"
+            android:icon="@drawable/offline_art"
+            android:title="Offline" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_art"
+            android:title="Profile" />
+    </group>
+
+
+
+</menu>

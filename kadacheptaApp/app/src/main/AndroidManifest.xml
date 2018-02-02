@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.n2quest.kadachepta">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.intent.action.PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/defim"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="" />
+        <activity
+            android:name=".TrendActivity"
+            android:label="@string/title_activity_trend"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PlayerActivity">
+            <intent-filter>
+                <action android:name="com.n2quest.kadachepta.PlayerService.ACTION_PLAY_COMPLETED"></action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.n2quest.kadachepta.PlayerService.ACTION_PLAY_CHANGE"></action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.n2quest.kadachepta.PlayerService.ACTION_PLAY_START"></action>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MyplaylistActivity"
+            android:label="@string/title_activity_myplaylist"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TrackplaylistActivity" />
+        <activity
+            android:name=".LikeActivity"
+            android:label="@string/title_activity_like"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".PublicplaylistActivity"
+            android:label="@string/title_activity_publicplaylist"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PublickTrackPlaylistActivity" />
+        <activity
+            android:name=".TrackSearchActivity"
+            android:label="@string/title_activity_track_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SearchTrackActivity" />
+        <activity
+            android:name=".OfflineActivity"
+            android:label="@string/title_activity_offline"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".PlayerService" />
+
+
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ForgotActivity"
+            android:label="" />
+
+    </application>
+
+</manifest>
