@@ -1,6 +1,6 @@
 ## This repository contains the codebase for *Kadachepta - Telugu Audio stories*  
 
-Its amazingly simple to wrap a responsive website into an app. Just clone the project and change the URI of your website from www.kadachepta.com to www.yourwebsite.com.
+Its amazingly simple to wrap a responsive website into an app. Just clone the project `Kadachepta` and change the URI of your website from www.kadachepta.com to www.yourwebsite.com.
 
 
 *Remember to have a high resolution image gallery for your app. Android Studio will resize the image to different resolutions*
