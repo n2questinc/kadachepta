@@ -44,7 +44,7 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.Hashtable
 import java.util.Map;
 
 public class RegistrationActivity extends AppCompatActivity implements Constant {
